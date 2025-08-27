@@ -18,20 +18,20 @@ export default function Counter() {
       <div className="flex justify-center gap-6 mb-4">
         <button
           onClick={decrement}
-          className="px-5 py-2 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-full shadow transition-all duration-200 active:scale-95 disabled:bg-red-300 disabled:cursor-not-allowed"
+          className="px-5 py-2 bg-red-500 hover:bg-red-600 text-white font-semibold rounded shadow transition-all duration-200 active:scale-95 disabled:bg-red-300 disabled:cursor-not-allowed"
           disabled={count === 0}
         >
           −
         </button>
         <button
           onClick={increment}
-          className="px-5 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full shadow transition-all duration-200 active:scale-95"
+          className="px-5 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded shadow transition-all duration-200 active:scale-95"
         >
           +
         </button>
         <button
           onClick={reset}
-          className="px-5 py-2 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-full shadow transition-all duration-200 active:scale-95"
+          className="px-5 py-2 bg-gray-500 hover:bg-gray-600 text-white font-semibold rounded shadow transition-all duration-200 active:scale-95"
         >
           Reset
         </button>

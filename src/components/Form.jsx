@@ -40,7 +40,7 @@ export default function Form() {
       onSubmit={handleSubmit}
       className="p-8 border-2 border-black rounded-xl w-full max-w-md mx-auto shadow-lg mt-8 transition hover:scale-105 flex flex-col gap-5 bg-white"
     >
-      <h2 className="text-xl font-bold mb-2">Register</h2>
+      <h2 className="text-2xl font-extrabold mb-4 text-black tracking-wide drop-shadow">Register</h2>
 
       <div className="flex flex-col gap-1 text-left">
         <label htmlFor="name" className="font-medium">Name</label>

@@ -5,7 +5,7 @@ import About from "./pages/About";
 export default function App() {
   return (
     <Router>
-      <nav className="p-4 bg-gray-800 text-white flex gap-4">
+      <nav className="fixed top-0 left-0 right-0 z-50 p-4 bg-gray-800 text-white flex gap-4 shadow-md">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
       </nav>

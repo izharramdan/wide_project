@@ -3,6 +3,8 @@ import axios from "axios";
 
 export default function Todo() {
   const [todo, setTodo] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     axios
@@ -11,20 +13,21 @@ export default function Todo() {
         setTodo(res.data);
         setLoading(false);
       })
-      .catch((err) => {
+      .catch(() => {
         setError("Gagal mengambil data");
         setLoading(false);
       });
   }, []);
 
-  if (!todo) return <p>Loading...</p>;
+  if (loading) return <p>Loading data...</p>;
+  if (error) return <p className="text-red-500">{error}</p>;
 
   return (
-    <div className="p-4 border rounded w-80 mx-auto text-center">
-      <h2 className="text-xl font-bold">Fetched Todo</h2>
-      <p>ID: {todo.id}</p>
-      <p>Title: {todo.title}</p>
-      <p>Status: {todo.completed ? "✅ Completed" : "❌ Not Completed"}</p>
+    <div className="p-4 border rounded shadow">
+      <h2 className="text-xl font-bold mb-2">Todo Item</h2>
+      <p><span className="font-semibold">ID:</span> {todo.id}</p>
+      <p><span className="font-semibold">Title:</span> {todo.title}</p>
+      <p><span className="font-semibold">Status:</span> {todo.completed ? "Completed" : "Not Completed"}</p>
     </div>
   );
 }

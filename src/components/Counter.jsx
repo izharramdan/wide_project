@@ -9,22 +9,32 @@ export default function Counter() {
   };
 
   return (
-    <div className="p-4 border rounded w-64 text-center mx-auto">
-      <h2 className="text-xl font-bold mb-4">Counter: {count}</h2>
-      <div className="flex justify-center gap-4">
+    <div className="p-6 border-2 border-blue-400 rounded-xl w-72 text-center mx-auto shadow-lg bg-gradient-to-br from-blue-50 to-blue-200 mt-8">
+      <h2 className="text-2xl font-extrabold mb-6 text-blue-700 tracking-wide drop-shadow">
+        Counter: <span className="text-3xl text-blue-900">{count}</span>
+      </h2>
+      <div className="flex justify-center gap-6 mb-4">
         <button
           onClick={decrement}
-          className="px-4 py-2 bg-red-500 rounded"
+          className="px-5 py-2 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-full shadow transition-all duration-200 active:scale-95 disabled:bg-red-300 disabled:cursor-not-allowed"
+          disabled={count === 0}
         >
-          Decrement
+          −
         </button>
         <button
           onClick={increment}
-          className="px-4 py-2 bg-green-500 rounded"
+          className="px-5 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full shadow transition-all duration-200 active:scale-95"
         >
-          Increment
+          +
         </button>
       </div>
+      <p className="text-sm text-gray-600 italic">
+        {count === 0
+          ? "Ayo mulai menghitung!"
+          : count < 5
+          ? "Terus tambahkan angkanya!"
+          : "Hebat! Kamu sudah mencapai angka tinggi!"}
+      </p>
     </div>
   );
 }

@@ -1,13 +1,20 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Todo() {
   const [todo, setTodo] = useState(null);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/todos/1")
-      .then((res) => res.json())
-      .then((data) => setTodo(data))
-      .catch((err) => console.error(err));
+    axios
+      .get("https://jsonplaceholder.typicode.com/todos/1")
+      .then((res) => {
+        setTodo(res.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError("Gagal mengambil data");
+        setLoading(false);
+      });
   }, []);
 
   if (!todo) return <p>Loading...</p>;

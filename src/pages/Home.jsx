@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <div className="p-6 text-center space-y-6">
-      <h1 className="text-2xl font-bold">Home Page</h1>
+      {/* <h1 className="text-2xl font-bold">Home Page</h1> */}
       <div className="flex flex-wrap justify-center gap-4">
         <button
           onClick={() => setActiveComponent("counter")}

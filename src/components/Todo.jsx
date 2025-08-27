@@ -33,7 +33,7 @@ export default function Todo() {
 
   return (
     <div className="p-6 border-2 border-black rounded-xl w-72 text-center mx-auto shadow-lg mt-8 transition hover:scale-105">
-      <h2 className="text-2xl font-extrabold mb-4 text-blue-700 tracking-wide drop-shadow">
+      <h2 className="text-2xl font-extrabold mb-4 text-black tracking-wide drop-shadow">
         Todo Item
       </h2>
       <div className="mb-3 flex items-center gap-2">

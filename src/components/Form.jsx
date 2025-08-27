@@ -38,7 +38,7 @@ export default function Form() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-4 border rounded w-80 mx-auto flex flex-col gap-4"
+      className="p-6 border-2 border-black rounded-xl w-72 text-center mx-auto shadow-lg mt-8 transition hover:scale-105"
     >
       <h2 className="text-xl font-bold">Register</h2>
 

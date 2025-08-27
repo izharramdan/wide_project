@@ -9,30 +9,26 @@ export default function Home() {
   return (
     <div className="p-6 text-center space-y-6">
       <h1 className="text-2xl font-bold">Home Page</h1>
-
-      {/* Buttons */}
       <div className="flex flex-wrap justify-center gap-4">
         <button
           onClick={() => setActiveComponent("counter")}
-          className="px-4 py-2 bg-green-500 text-white rounded"
+          className="px-4 py-2 bg-green-500 rounded"
         >
           Show Counter
         </button>
         <button
           onClick={() => setActiveComponent("form")}
-          className="px-4 py-2 bg-blue-500 text-white rounded"
+          className="px-4 py-2 bg-blue-500 rounded"
         >
           Show Register Form
         </button>
         <button
           onClick={() => setActiveComponent("todo")}
-          className="px-4 py-2 bg-purple-500 text-white rounded"
+          className="px-4 py-2 bg-purple-500 rounded"
         >
           Show Todo
         </button>
       </div>
-
-      {/* Render Komponen */}
       <div className="mt-6">
         {activeComponent === "counter" && <Counter />}
         {activeComponent === "form" && <Form />}

@@ -14,19 +14,19 @@ export default function Home() {
           onClick={() => setActiveComponent("counter")}
           className="px-4 py-2 bg-green-500 rounded"
         >
-          Show Counter
+         Counter
         </button>
         <button
           onClick={() => setActiveComponent("form")}
           className="px-4 py-2 bg-blue-500 rounded"
         >
-          Show Register Form
+          Form
         </button>
         <button
           onClick={() => setActiveComponent("todo")}
           className="px-4 py-2 bg-purple-500 rounded"
         >
-          Show Todo
+          Todo
         </button>
       </div>
       <div className="mt-6">

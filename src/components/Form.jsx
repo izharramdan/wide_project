@@ -38,53 +38,69 @@ export default function Form() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-6 border-2 border-black rounded-xl w-72 text-center mx-auto shadow-lg mt-8 transition hover:scale-105"
+      className="p-8 border-2 border-black rounded-xl w-full max-w-md mx-auto shadow-lg mt-8 transition hover:scale-105 flex flex-col gap-5 bg-white"
     >
-      <h2 className="text-xl font-bold">Register</h2>
+      <h2 className="text-xl font-bold mb-2">Register</h2>
 
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        value={form.name}
-        onChange={handleChange}
-        className="p-2 border rounded"
-      />
-      {errors.name && <p className="text-red-500">{errors.name}</p>}
+      <div className="flex flex-col gap-1 text-left">
+        <label htmlFor="name" className="font-medium">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Name"
+          value={form.name}
+          onChange={handleChange}
+          className="p-2 border rounded"
+        />
+        {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+      </div>
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={form.email}
-        onChange={handleChange}
-        className="p-2 border rounded"
-      />
-      {errors.email && <p className="text-red-500">{errors.email}</p>}
+      <div className="flex flex-col gap-1 text-left">
+        <label htmlFor="email" className="font-medium">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          value={form.email}
+          onChange={handleChange}
+          className="p-2 border rounded"
+        />
+        {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+      </div>
 
-      <input
-        type="password"
-        name="password"
-        placeholder="Password"
-        value={form.password}
-        onChange={handleChange}
-        className="p-2 border rounded"
-      />
-      {errors.password && <p className="text-red-500">{errors.password}</p>}
+      <div className="flex flex-col gap-1 text-left">
+        <label htmlFor="password" className="font-medium">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          value={form.password}
+          onChange={handleChange}
+          className="p-2 border rounded"
+        />
+        {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
+      </div>
 
-      <input
-        type="password"
-        name="confirmPassword"
-        placeholder="Confirm Password"
-        value={form.confirmPassword}
-        onChange={handleChange}
-        className="p-2 border rounded"
-      />
-      {errors.confirmPassword && (
-        <p className="text-red-500">{errors.confirmPassword}</p>
-      )}
+      <div className="flex flex-col gap-1 text-left">
+        <label htmlFor="confirmPassword" className="font-medium">Confirm Password</label>
+        <input
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+          placeholder="Confirm Password"
+          value={form.confirmPassword}
+          onChange={handleChange}
+          className="p-2 border rounded"
+        />
+        {errors.confirmPassword && (
+          <p className="text-red-500 text-sm">{errors.confirmPassword}</p>
+        )}
+      </div>
 
-      <button className="px-4 py-2 bg-blue-500 rounded">
+      <button className="px-4 py-2 bg-blue-500 rounded self-end">
         Submit
       </button>
     </form>

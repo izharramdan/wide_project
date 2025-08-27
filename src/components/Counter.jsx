@@ -29,11 +29,6 @@ export default function Counter() {
         </button>
       </div>
       <p className="text-sm text-gray-600 italic">
-        {count === 0
-          ? "Ayo mulai menghitung!"
-          : count < 5
-          ? "Terus tambahkan angkanya!"
-          : "Hebat! Kamu sudah mencapai angka tinggi!"}
       </p>
     </div>
   );

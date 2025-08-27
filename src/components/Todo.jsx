@@ -32,7 +32,7 @@ export default function Todo() {
   if (error) return <p className="text-red-500 font-semibold">{error}</p>;
 
   return (
-    <div className="p-6 border-2 border-blue-300 rounded-xl w-80 mx-auto shadow-lg bg-gradient-to-br from-blue-50 to-blue-200 mt-8 transition hover:scale-105">
+    <div className="p-6 border-2 border-black rounded-xl w-72 text-center mx-auto shadow-lg mt-8 transition hover:scale-105">
       <h2 className="text-2xl font-extrabold mb-4 text-blue-700 tracking-wide drop-shadow">
         Todo Item
       </h2>

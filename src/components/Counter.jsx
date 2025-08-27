@@ -14,13 +14,13 @@ export default function Counter() {
       <div className="flex justify-center gap-4">
         <button
           onClick={decrement}
-          className="px-4 py-2 bg-red-500 text-white rounded"
+          className="px-4 py-2 bg-red-500 rounded"
         >
           Decrement
         </button>
         <button
           onClick={increment}
-          className="px-4 py-2 bg-green-500 text-white rounded"
+          className="px-4 py-2 bg-green-500 rounded"
         >
           Increment
         </button>

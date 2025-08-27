@@ -25,7 +25,7 @@ export default function Todo() {
   return (
     <div className="p-4 border rounded shadow">
       <h2 className="text-xl font-bold mb-2">Todo Item</h2>
-      <p><span className="font-semibold">ID:</span> {todo.id}</p>
+      {/* <p><span className="font-semibold">ID:</span> {todo.id}</p> */}
       <p><span className="font-semibold">Title:</span> {todo.title}</p>
       <p><span className="font-semibold">Status:</span> {todo.completed ? "Completed" : "Not Completed"}</p>
     </div>

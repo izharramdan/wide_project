@@ -30,7 +30,7 @@ export default function Form() {
     const newErrors = validate();
     setErrors(newErrors);
     if (Object.keys(newErrors).length === 0) {
-      alert("Form submitted successfully ✅");
+      alert("Form submitted successfully");
       setForm({ name: "", email: "", password: "", confirmPassword: "" });
     }
   };
@@ -84,7 +84,7 @@ export default function Form() {
         <p className="text-red-500">{errors.confirmPassword}</p>
       )}
 
-      <button className="px-4 py-2 bg-blue-500 text-white rounded">
+      <button className="px-4 py-2 bg-blue-500 rounded">
         Submit
       </button>
     </form>
